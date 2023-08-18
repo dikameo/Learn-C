@@ -4,22 +4,16 @@ void selectionSort(int array[], int n) {
     for (int i = 0; i < n-1; i++) {
         int minIndex = i;
         for (int j = i + 1; j < n; j++) {
-            if (array[j] > array[minIndex]) { 
-                minIndex = j;
+            if (array[j] > array[minIndex]) { // Jika array[1] > array [0] sukses
+                minIndex = j; // maka perbarui  array[0] dengan array[1]
             }
         }
         // Tukar elemen terkecil dengan elemen di posisi i
-        int temp = array[i];
+        int temp = array[i]; // Tukar Posisi antara array [0] dengan array [1]
         array[i] = array[minIndex];
         array[minIndex] = temp;
     }
 }
-// Penjelasan
-// for iterasi pada looping kesatu  dengan adanya n-1 mengurangi perbandingan untuk iterasi terakhir opsional tidak apa apa menggunakan n saja
-// for iterasi kedua nilai j = i + 1, karena untuk membandingkan elemen i dengan elemen j= i + 1, semisal i = 0 maka j = i+1 maka j bernilai 1
- // Jika nilai pada array[j] > array[minIndex], array[j] sama dengan array pada indeks 1 > daripada array dari pada array indeks i, i disini berarti 0 maka
-// nilai dari minIndex akan diperbarui dengan array[j]  disitu array j bernilai 1
-// Kemudian kita tukar dibantu dengan variabel temp
 
 
 int main() {
