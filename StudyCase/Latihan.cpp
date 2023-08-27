@@ -1,29 +1,14 @@
-#include<stdio.h>
-int main(){
-	int i;
-	int arr[]={4,2,1,78,3};
-	int urutan[100];
-	int rangearr = sizeof(arr) / sizeof(arr[0]);
-	
-	for(i=0; i<rangearr; i++){
-		int cek = i;
-		for (int j = i + 1; j < rangearr; j++) {
-            if (arr[j] > arr[cek]) {  
-                cek = j;
-            }
+#include <stdio.h>
+
+int main() {
+    char arr[4][100] = {"sapi", "kuda", "kucing"}; // Array dengan elemen sampai indeks 3
+	char kosong[10] = "sapi";
+    for (int i = 0; i < 4; i++) {
+        if (i <= 3) {
+            printf("Elemen pada indeks %d: %s\n", i, arr[i]);
         }
-			int tmp = arr[i];
-			arr[i] = arr[cek];
-			arr[cek] = tmp;
-		}
-	
-	printf("Urutan: %d",arr[0]);
-//	for(i=0; i<rangearr; i++){
-//		printf("%d,",arr[i]);
-//	}
-	
+    }
+
+    return 0;
 }
-
-
-
 
